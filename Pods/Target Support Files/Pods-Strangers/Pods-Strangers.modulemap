@@ -1,0 +1,6 @@
+framework module Pods_Strangers {
+  umbrella header "Pods-Strangers-umbrella.h"
+
+  export *
+  module * { export * }
+}
