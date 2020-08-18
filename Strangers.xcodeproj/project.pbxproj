@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -22,6 +22,15 @@
 		F4C758AF24EA7BDB00CEEA00 /* UserCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C758AE24EA7BDB00CEEA00 /* UserCoordinator.swift */; };
 		F4C758B124EA85C100CEEA00 /* SettingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C758B024EA85C100CEEA00 /* SettingCoordinator.swift */; };
 		F4C758B424EA862000CEEA00 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C758B324EA862000CEEA00 /* SettingViewController.swift */; };
+		F4C758B924EAA6DC00CEEA00 /* UseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C758B824EAA6DC00CEEA00 /* UseCase.swift */; };
+		F4C758BC24EAA74B00CEEA00 /* Cancellable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C758BB24EAA74B00CEEA00 /* Cancellable.swift */; };
+		F4C758BF24EAA7A600CEEA00 /* FetchUsersUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C758BE24EAA7A600CEEA00 /* FetchUsersUseCase.swift */; };
+		F4C758C224EAA97800CEEA00 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C758C124EAA97800CEEA00 /* User.swift */; };
+		F4C758CC24EBA66900CEEA00 /* UserRepositoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C758CB24EBA66900CEEA00 /* UserRepositoryType.swift */; };
+		F4C758CE24EBA67A00CEEA00 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C758CD24EBA67A00CEEA00 /* UserRepository.swift */; };
+		F4C758D224EBC47800CEEA00 /* Github.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C758D124EBC47800CEEA00 /* Github.swift */; };
+		F4C758D424EBD1BE00CEEA00 /* GithubService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C758D324EBD1BE00CEEA00 /* GithubService.swift */; };
+		F4C758D624EBE2F300CEEA00 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C758D524EBE2F300CEEA00 /* HomeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +53,15 @@
 		F4C758AE24EA7BDB00CEEA00 /* UserCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCoordinator.swift; sourceTree = "<group>"; };
 		F4C758B024EA85C100CEEA00 /* SettingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingCoordinator.swift; sourceTree = "<group>"; };
 		F4C758B324EA862000CEEA00 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		F4C758B824EAA6DC00CEEA00 /* UseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCase.swift; sourceTree = "<group>"; };
+		F4C758BB24EAA74B00CEEA00 /* Cancellable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cancellable.swift; sourceTree = "<group>"; };
+		F4C758BE24EAA7A600CEEA00 /* FetchUsersUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchUsersUseCase.swift; sourceTree = "<group>"; };
+		F4C758C124EAA97800CEEA00 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		F4C758CB24EBA66900CEEA00 /* UserRepositoryType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepositoryType.swift; sourceTree = "<group>"; };
+		F4C758CD24EBA67A00CEEA00 /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
+		F4C758D124EBC47800CEEA00 /* Github.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Github.swift; sourceTree = "<group>"; };
+		F4C758D324EBD1BE00CEEA00 /* GithubService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubService.swift; sourceTree = "<group>"; };
+		F4C758D524EBE2F300CEEA00 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,8 +114,12 @@
 		F4BA3DDC24C54AB30009FF20 /* Strangers */ = {
 			isa = PBXGroup;
 			children = (
-				F4C758A124EA478900CEEA00 /* Scene */,
 				F4C7589E24EA46ED00CEEA00 /* Application */,
+				F4C758BA24EAA73500CEEA00 /* Common */,
+				F4C758C324EAB15600CEEA00 /* Data */,
+				F4C758B624EAA30F00CEEA00 /* Domain */,
+				F4C758CF24EBC3BE00CEEA00 /* Infrastructure */,
+				F4C758B524EA963700CEEA00 /* Presentation */,
 				F4BA3DDD24C54AB30009FF20 /* AppDelegate.swift */,
 				F4BA3DDF24C54AB30009FF20 /* SceneDelegate.swift */,
 				F4BA3DE124C54AB30009FF20 /* ViewController.swift */,
@@ -135,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				F4C758A524EA47BF00CEEA00 /* HomeViewController.swift */,
+				F4C758D524EBE2F300CEEA00 /* HomeViewModel.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -163,6 +186,106 @@
 			path = Setting;
 			sourceTree = "<group>";
 		};
+		F4C758B524EA963700CEEA00 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				F4C758A124EA478900CEEA00 /* Scene */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		F4C758B624EAA30F00CEEA00 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				F4C758C524EB92AA00CEEA00 /* Interface */,
+				F4C758C024EAA95200CEEA00 /* Entities */,
+				F4C758BD24EAA79700CEEA00 /* UseCases */,
+				F4C758B724EAA6C400CEEA00 /* Protocol */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		F4C758B724EAA6C400CEEA00 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				F4C758B824EAA6DC00CEEA00 /* UseCase.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		F4C758BA24EAA73500CEEA00 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				F4C758BB24EAA74B00CEEA00 /* Cancellable.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		F4C758BD24EAA79700CEEA00 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				F4C758BE24EAA7A600CEEA00 /* FetchUsersUseCase.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		F4C758C024EAA95200CEEA00 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				F4C758C124EAA97800CEEA00 /* User.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		F4C758C324EAB15600CEEA00 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				F4C758C424EAB15B00CEEA00 /* Repositories */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		F4C758C424EAB15B00CEEA00 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				F4C758CD24EBA67A00CEEA00 /* UserRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		F4C758C524EB92AA00CEEA00 /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				F4C758C624EB92BD00CEEA00 /* Repositories */,
+			);
+			path = Interface;
+			sourceTree = "<group>";
+		};
+		F4C758C624EB92BD00CEEA00 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				F4C758CB24EBA66900CEEA00 /* UserRepositoryType.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		F4C758CF24EBC3BE00CEEA00 /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				F4C758D024EBC3CC00CEEA00 /* Network */,
+			);
+			path = Infrastructure;
+			sourceTree = "<group>";
+		};
+		F4C758D024EBC3CC00CEEA00 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				F4C758D124EBC47800CEEA00 /* Github.swift */,
+				F4C758D324EBD1BE00CEEA00 /* GithubService.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -174,6 +297,7 @@
 				F4BA3DD624C54AB30009FF20 /* Sources */,
 				F4BA3DD724C54AB30009FF20 /* Frameworks */,
 				F4BA3DD824C54AB30009FF20 /* Resources */,
+				6C83EC85EF4914809DF4145C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -253,6 +377,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		6C83EC85EF4914809DF4145C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Strangers/Pods-Strangers-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Strangers/Pods-Strangers-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Strangers/Pods-Strangers-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -260,15 +401,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4C758D424EBD1BE00CEEA00 /* GithubService.swift in Sources */,
+				F4C758D224EBC47800CEEA00 /* Github.swift in Sources */,
 				F4C7589D24EA465E00CEEA00 /* Coordinator.swift in Sources */,
+				F4C758D624EBE2F300CEEA00 /* HomeViewModel.swift in Sources */,
+				F4C758BC24EAA74B00CEEA00 /* Cancellable.swift in Sources */,
 				F4C758B424EA862000CEEA00 /* SettingViewController.swift in Sources */,
 				F4C758A824EA487200CEEA00 /* MainCoordinator.swift in Sources */,
+				F4C758CC24EBA66900CEEA00 /* UserRepositoryType.swift in Sources */,
 				F4BA3DE224C54AB30009FF20 /* ViewController.swift in Sources */,
+				F4C758CE24EBA67A00CEEA00 /* UserRepository.swift in Sources */,
 				F4C758AF24EA7BDB00CEEA00 /* UserCoordinator.swift in Sources */,
 				F4C758A024EA470100CEEA00 /* Storyboarded.swift in Sources */,
+				F4C758BF24EAA7A600CEEA00 /* FetchUsersUseCase.swift in Sources */,
+				F4C758C224EAA97800CEEA00 /* User.swift in Sources */,
 				F4BA3DDE24C54AB30009FF20 /* AppDelegate.swift in Sources */,
 				F4BA3DE024C54AB30009FF20 /* SceneDelegate.swift in Sources */,
 				F4C758B124EA85C100CEEA00 /* SettingCoordinator.swift in Sources */,
+				F4C758B924EAA6DC00CEEA00 /* UseCase.swift in Sources */,
 				F4C758AB24EA620700CEEA00 /* UserDetailsViewController.swift in Sources */,
 				F4C758A624EA47BF00CEEA00 /* HomeViewController.swift in Sources */,
 			);

@@ -11,13 +11,22 @@ import UIKit
 class HomeViewController: UIViewController, Storyboarded {
     
     weak var coordinator: MainCoordinator?
+    private var viewModel: HomeViewModel!
     
     @IBOutlet weak var tableView: UITableView!
     
     var data = ["anjay", "anjuy", "ashiyap"]
+    var userData = [User]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        viewModel = HomeViewModel(fetchUsersUseCase: FetchUsersUseCase(userRepository: UserRepository()))
+        viewModel.fetchUsers { result in
+            self.userData = result
+            print(result)
+        }
+        
         
         navigationItem.rightBarButtonItems = [UIBarButtonItem(title: "Add", style: .plain, target: self, action: #selector(addUserDidTap))]
         
