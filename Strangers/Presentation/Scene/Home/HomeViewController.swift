@@ -16,22 +16,31 @@ class HomeViewController: UIViewController, Storyboarded {
     @IBOutlet weak var tableView: UITableView!
     
     var data = ["anjay", "anjuy", "ashiyap"]
-    var userData = [User]()
+    var users = [User]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         viewModel = HomeViewModel(fetchUsersUseCase: FetchUsersUseCase(userRepository: UserRepository()))
         viewModel.fetchUsers { result in
-            self.userData = result
-            print(result)
+            self.users = result
+            self.tableView.reloadData()
         }
         
-        
-        navigationItem.rightBarButtonItems = [UIBarButtonItem(title: "Add", style: .plain, target: self, action: #selector(addUserDidTap))]
+        setupView()
+        registerNib()
         
         tableView?.delegate = self
         tableView?.dataSource = self
+    }
+    
+    func setupView() {
+        navigationItem.rightBarButtonItems = [UIBarButtonItem(title: "Add", style: .plain, target: self, action: #selector(addUserDidTap))]
+    }
+    
+    func registerNib() {
+        let nib = UINib(nibName: UserTableViewCell.reusableIdentifier, bundle: nil)
+        tableView.register(nib, forCellReuseIdentifier: UserTableViewCell.reusableIdentifier)
     }
     
     
@@ -47,14 +56,20 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return data.count
+        return users.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
-        cell.textLabel?.text = data[indexPath.row]
+        guard let cell = tableView.dequeueReusableCell(
+            withIdentifier: UserTableViewCell.reusableIdentifier,
+            for: indexPath) as? UserTableViewCell else { return UITableViewCell() }
+        
+        cell.updateView(user: users[indexPath.row])
+        
         return cell
     }
     
-    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 88
+    }
 }

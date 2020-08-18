@@ -31,6 +31,8 @@
 		F4C758D224EBC47800CEEA00 /* Github.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C758D124EBC47800CEEA00 /* Github.swift */; };
 		F4C758D424EBD1BE00CEEA00 /* GithubService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C758D324EBD1BE00CEEA00 /* GithubService.swift */; };
 		F4C758D624EBE2F300CEEA00 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C758D524EBE2F300CEEA00 /* HomeViewModel.swift */; };
+		F4C758DA24EC06EA00CEEA00 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C758D824EC06EA00CEEA00 /* UserTableViewCell.swift */; };
+		F4C758DB24EC06EA00CEEA00 /* UserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4C758D924EC06EA00CEEA00 /* UserTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +64,8 @@
 		F4C758D124EBC47800CEEA00 /* Github.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Github.swift; sourceTree = "<group>"; };
 		F4C758D324EBD1BE00CEEA00 /* GithubService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubService.swift; sourceTree = "<group>"; };
 		F4C758D524EBE2F300CEEA00 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		F4C758D824EC06EA00CEEA00 /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
+		F4C758D924EC06EA00CEEA00 /* UserTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +160,7 @@
 		F4C758A224EA479500CEEA00 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				F4C758D724EC06C500CEEA00 /* Cell */,
 				F4C758A524EA47BF00CEEA00 /* HomeViewController.swift */,
 				F4C758D524EBE2F300CEEA00 /* HomeViewModel.swift */,
 			);
@@ -286,6 +291,15 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
+		F4C758D724EC06C500CEEA00 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				F4C758D824EC06EA00CEEA00 /* UserTableViewCell.swift */,
+				F4C758D924EC06EA00CEEA00 /* UserTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -346,6 +360,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4C758DB24EC06EA00CEEA00 /* UserTableViewCell.xib in Resources */,
 				F4BA3DEA24C54AB90009FF20 /* LaunchScreen.storyboard in Resources */,
 				F4BA3DE724C54AB90009FF20 /* Assets.xcassets in Resources */,
 				F4BA3DE524C54AB30009FF20 /* Main.storyboard in Resources */,
@@ -417,6 +432,7 @@
 				F4C758C224EAA97800CEEA00 /* User.swift in Sources */,
 				F4BA3DDE24C54AB30009FF20 /* AppDelegate.swift in Sources */,
 				F4BA3DE024C54AB30009FF20 /* SceneDelegate.swift in Sources */,
+				F4C758DA24EC06EA00CEEA00 /* UserTableViewCell.swift in Sources */,
 				F4C758B124EA85C100CEEA00 /* SettingCoordinator.swift in Sources */,
 				F4C758B924EAA6DC00CEEA00 /* UseCase.swift in Sources */,
 				F4C758AB24EA620700CEEA00 /* UserDetailsViewController.swift in Sources */,
