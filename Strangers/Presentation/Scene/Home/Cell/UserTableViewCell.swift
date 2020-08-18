@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class UserTableViewCell: UITableViewCell {
     
@@ -19,7 +20,12 @@ class UserTableViewCell: UITableViewCell {
     
     func updateView(user: User) {
         isStaffUIView.layer.cornerRadius = isStaffUIView.layer.bounds.height / 2
+        userImageView.layer.cornerRadius = userImageView.layer.bounds.height / 2
+        
         nameLabel.text = user.login
+        userImageView
+            .kf
+            .setImage(with: URL(string: user.avatar ?? ""))
         
         updateStaffLabel(isStaff: true)
     }
