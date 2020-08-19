@@ -9,15 +9,15 @@
 import Moya
 
 protocol GithubServiceType {
-    func fetchUsers(completion: @escaping (Result<[User], Error>) -> Void)
+    func fetchUsers(page:Int, pageLimit: Int, completion: @escaping (Result<[User], Error>) -> Void)
 }
 
 class GithubService: GithubServiceType {
     
     private let provider = MoyaProvider<Github>()
     
-    func fetchUsers(completion: @escaping (Result<[User], Error>) -> Void) {
-        provider.request(.fetchUsers) { result in
+    func fetchUsers(page:Int, pageLimit: Int, completion: @escaping (Result<[User], Error>) -> Void) {
+        provider.request(.fetchUsers(page: page, pageLimit: pageLimit)) { result in
             switch result {
             case .success(let response):
                 do {

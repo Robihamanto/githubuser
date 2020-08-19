@@ -22,16 +22,17 @@ class UserTableViewCell: UITableViewCell {
         isStaffUIView.layer.cornerRadius = isStaffUIView.layer.bounds.height / 2
         userImageView.layer.cornerRadius = userImageView.layer.bounds.height / 2
         
-        nameLabel.text = user.login
+        nameLabel.text = user.name
+        
         userImageView
             .kf
             .setImage(with: URL(string: user.avatar ?? ""))
         
-        updateStaffLabel(isStaff: true)
+        updateStaffLabel(isStaff: user.isAdmin ?? false)
     }
     
     func updateStaffLabel(isStaff: Bool) {
-        
+        isStaffUIView.isHidden = !isStaff
     }
     
 }

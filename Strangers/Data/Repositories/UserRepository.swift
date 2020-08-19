@@ -17,9 +17,9 @@ final class UserRepository {
 
 extension UserRepository: UserRepositoryType {
     
-    func fetchUsers(page: Int, completion: @escaping (Result<[User], Error>) -> Void) {
+    func fetchUsers(page: Int, pageLimit: Int, completion: @escaping (Result<[User], Error>) -> Void) {
         let service = GithubService()
-        service.fetchUsers { result in
+        service.fetchUsers(page: page, pageLimit: pageLimit) { result in
             switch result {
             case .success(let users):
                 completion(.success(users))

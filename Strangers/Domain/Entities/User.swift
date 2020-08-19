@@ -10,11 +10,15 @@ import Foundation
 
 struct User: Codable {
     var id: Int?
-    var login: String?
+    var name: String?
     var avatar: String?
+    var isAdmin: Bool?
     
     public enum CodingKeys: String, CodingKey {
+        case id = "id"
+        case name = "login"
         case avatar = "avatar_url"
+        case isAdmin = "site_admin"
     }
     
 }

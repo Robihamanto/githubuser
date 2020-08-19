@@ -10,6 +10,6 @@ import Foundation
 
 protocol UserRepositoryType {
     
-    func fetchUsers(page: Int, completion: @escaping (Result<[User], Error>) -> Void)
+    func fetchUsers(page: Int, pageLimit: Int, completion: @escaping (Result<[User], Error>) -> Void)
     
 }

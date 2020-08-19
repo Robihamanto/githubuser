@@ -22,7 +22,7 @@ final class FetchUsersUseCase: FetchUsersUseCaseType {
     }
     
     func execute(requestValue: FetchUsersUseCaseRequestValue, completion: @escaping ((Result<[User], Error>) -> Void)) {
-        userRepository.fetchUsers(page: requestValue.page) { result in
+        userRepository.fetchUsers(page: requestValue.page, pageLimit: requestValue.limit) { result in
             switch result {
             case .success(let users):
                 completion(.success(users))

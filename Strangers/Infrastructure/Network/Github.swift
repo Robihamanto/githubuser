@@ -9,7 +9,7 @@
 import Moya
 
 enum Github {
-    case fetchUsers
+    case fetchUsers(page: Int, pageLimit: Int)
     case fetchUser(id: Int)
 }
 
@@ -45,7 +45,14 @@ extension Github: TargetType {
     
     var task: Task {
         switch self {
-        case .fetchUsers, .fetchUser:
+        case let .fetchUsers (page, pageLimit):
+            var params: [String: Any] = [:]
+            params["page"] = page
+            params["per_page"] = pageLimit
+
+            return .requestParameters(parameters: params, encoding: URLEncoding())
+            
+        case .fetchUser:
             return .requestPlain
         }
     }
