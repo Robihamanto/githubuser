@@ -12,6 +12,7 @@ class UserDetailsViewController: UIViewController, Storyboarded {
     
     @IBOutlet weak var userPhotoImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var bioLabel: UITextView!
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var linkLabel: UILabel!

@@ -170,17 +170,9 @@
 		F4C758A924EA61F400CEEA00 /* User Details */ = {
 			isa = PBXGroup;
 			children = (
-				F4C758AC24EA627900CEEA00 /* Cell */,
 				F4C758AA24EA620700CEEA00 /* UserDetailsViewController.swift */,
 			);
 			path = "User Details";
-			sourceTree = "<group>";
-		};
-		F4C758AC24EA627900CEEA00 /* Cell */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Cell;
 			sourceTree = "<group>";
 		};
 		F4C758B224EA861400CEEA00 /* Setting */ = {
