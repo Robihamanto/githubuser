@@ -34,4 +34,4 @@ Fetching users on github, and display the user details
 5. Fun thing!
 
 ## 📱 Preview
-<img src="./Preview/Strangers.gif" alt="alt text" width="260px" height="480px">
+<img src="./Preview/Strangers.gif" alt="alt text" width="188px" height="408px">
