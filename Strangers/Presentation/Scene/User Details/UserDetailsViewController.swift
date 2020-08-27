@@ -9,6 +9,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import SafariServices
 
 class UserDetailsViewController: UIViewController, Storyboarded {
     
@@ -17,12 +18,13 @@ class UserDetailsViewController: UIViewController, Storyboarded {
     @IBOutlet weak var bioLabel: UITextView!
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var locationLabel: UILabel!
-    @IBOutlet weak var linkLabelButton: UIButton!
+    @IBOutlet weak var linkLabel: UILabel!
     @IBOutlet weak var isStaff: UIView!
     @IBOutlet weak var isLoadingActivityIndicatior: UIActivityIndicatorView!
     
     weak var coordinator: UserCoordinator?
     var userID = 0
+    var user: User?
     
     private var viewModel: UserDetailsViewModel!
     private let disposeBag = DisposeBag()
@@ -37,15 +39,16 @@ class UserDetailsViewController: UIViewController, Storyboarded {
     private func bindViewModel() {
         let outputs = viewModel.output
         
-        outputs.user.subscribe(onNext: { user in
-            self.userPhotoImageView.kf.setImage(with: URL(string: user.avatar ?? ""))
-            self.nameLabel.text = user.name ?? "N/A"
-            self.bioLabel.text = user.bio ?? "N/A"
-            self.usernameLabel.text = user.login ?? "N/A"
-            self.locationLabel.text = user.location ?? "N/A"
-            self.linkLabelButton.titleLabel?.text = user.url ?? "URL N/A"
+        outputs.user.subscribe(onNext: {[weak self] user in
+            self?.user = user
+            self?.userPhotoImageView.kf.setImage(with: URL(string: user.avatar ?? ""))
+            self?.nameLabel.text = user.name ?? "N/A"
+            self?.bioLabel.text = user.bio ?? "N/A"
+            self?.usernameLabel.text = user.login ?? "N/A"
+            self?.locationLabel.text = user.location ?? "N/A"
+            self?.linkLabel.text = user.url ?? "URL N/A"
             
-            self.isStaff.isHidden = !(user.isAdmin ?? false)
+            self?.isStaff.isHidden = !(user.isAdmin ?? false)
             
             }).disposed(by: disposeBag)
         
@@ -65,5 +68,29 @@ class UserDetailsViewController: UIViewController, Storyboarded {
         userPhotoImageView
             .layer
             .cornerRadius = userPhotoImageView.bounds.height / 2
+        
+        let linkTap = UITapGestureRecognizer(target: self, action: #selector(linkDidTap))
+        linkLabel.addGestureRecognizer(linkTap)
     }
+    
+    
+}
+
+extension UserDetailsViewController: SFSafariViewControllerDelegate {
+    
+    @objc func linkDidTap() {
+        let urlString = user?.url ?? "https://come.co.id"
+
+        if let url = URL(string: urlString) {
+            let vc = SFSafariViewController(url: url)
+            vc.delegate = self
+
+            present(vc, animated: true)
+        }
+    }
+    
+    func safariViewControllerDidFinish(_ controller: SFSafariViewController) {
+        dismiss(animated: true)
+    }
+    
 }
