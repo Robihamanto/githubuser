@@ -22,7 +22,7 @@ open Papr.xcworkspace # or xed .
 - Test (⌘ + U)
 ```
 
-## Strangers
+## 👨🏻‍💻 Strangers
 
 Fetching users on github, and display the user details
 
@@ -33,5 +33,5 @@ Fetching users on github, and display the user details
 4. Exploring [Github](https://github.com) and its [API](https://developer.github.com/v3/)
 5. Fun thing!
 
-## Preview
+## 📱 Preview
 <img src="./preview/strangers.gif" alt="alt text" width="260px" height="480px">
