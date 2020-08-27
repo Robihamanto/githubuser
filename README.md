@@ -1,6 +1,6 @@
 Strangers ( Github API)
 ===================
-<img src="./preview/github-512.png" alt="alt text" width="160px" height="160px">
+<img src="./Preview/github-512.png" alt="alt text" width="160px" height="160px">
 
 [![Platform](http://img.shields.io/badge/platform-ios-blue.svg?style=flat
 )](https://developer.apple.com/iphone/index.action)
@@ -34,4 +34,4 @@ Fetching users on github, and display the user details
 5. Fun thing!
 
 ## 📱 Preview
-<img src="./preview/strangers.gif" alt="alt text" width="260px" height="480px">
+<img src="./Preview/Strangers.gif" alt="alt text" width="188px" height="408px">
