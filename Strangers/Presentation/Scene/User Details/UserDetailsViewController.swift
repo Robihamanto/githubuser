@@ -46,7 +46,7 @@ class UserDetailsViewController: UIViewController, Storyboarded {
             self?.bioLabel.text = user.bio ?? "N/A"
             self?.usernameLabel.text = user.login ?? "N/A"
             self?.locationLabel.text = user.location ?? "N/A"
-            self?.linkLabel.text = user.url ?? "URL N/A"
+            self?.linkLabel.text = user.blog ?? "URL N/A"
             
             self?.isStaff.isHidden = !(user.isAdmin ?? false)
             
@@ -79,7 +79,7 @@ class UserDetailsViewController: UIViewController, Storyboarded {
 extension UserDetailsViewController: SFSafariViewControllerDelegate {
     
     @objc func linkDidTap() {
-        let urlString = user?.url ?? "https://come.co.id"
+        let urlString = user?.blog ?? "https://come.co.id"
 
         if let url = URL(string: urlString) {
             let vc = SFSafariViewController(url: url)
