@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		893540913BF2535F7F573100 /* Pods_Strangers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34C9E1B29EC6201487D39906 /* Pods_Strangers.framework */; };
+		F45DFD6324F76180003304CB /* UserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45DFD6224F76180003304CB /* UserTests.swift */; };
 		F4AC61B824F369F800D82D81 /* UserDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AC61B724F369F800D82D81 /* UserDetailsViewModel.swift */; };
 		F4AC61BA24F36C3800D82D81 /* FetchUserUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AC61B924F36C3800D82D81 /* FetchUserUseCase.swift */; };
 		F4BA3DDE24C54AB30009FF20 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BA3DDD24C54AB30009FF20 /* AppDelegate.swift */; };
@@ -37,10 +38,23 @@
 		F4C758DB24EC06EA00CEEA00 /* UserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4C758D924EC06EA00CEEA00 /* UserTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		F45DFD5D24F7612B003304CB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F4BA3DD224C54AB30009FF20 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F4BA3DD924C54AB30009FF20;
+			remoteInfo = Strangers;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		34C9E1B29EC6201487D39906 /* Pods_Strangers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Strangers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A4CC7FECD2930294F1603C8 /* Pods-Strangers.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Strangers.debug.xcconfig"; path = "Target Support Files/Pods-Strangers/Pods-Strangers.debug.xcconfig"; sourceTree = "<group>"; };
 		84887A1CEFAEE24B7A5F809B /* Pods-Strangers.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Strangers.release.xcconfig"; path = "Target Support Files/Pods-Strangers/Pods-Strangers.release.xcconfig"; sourceTree = "<group>"; };
+		F45DFD5824F7612B003304CB /* StrangersTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StrangersTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F45DFD5C24F7612B003304CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F45DFD6224F76180003304CB /* UserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTests.swift; sourceTree = "<group>"; };
 		F4AC61B724F369F800D82D81 /* UserDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsViewModel.swift; sourceTree = "<group>"; };
 		F4AC61B924F36C3800D82D81 /* FetchUserUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchUserUseCase.swift; sourceTree = "<group>"; };
 		F4BA3DDA24C54AB30009FF20 /* Strangers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Strangers.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -73,6 +87,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		F45DFD5524F7612B003304CB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F4BA3DD724C54AB30009FF20 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -101,10 +122,20 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		F45DFD5924F7612B003304CB /* StrangersTests */ = {
+			isa = PBXGroup;
+			children = (
+				F45DFD5C24F7612B003304CB /* Info.plist */,
+				F45DFD6224F76180003304CB /* UserTests.swift */,
+			);
+			path = StrangersTests;
+			sourceTree = "<group>";
+		};
 		F4BA3DD124C54AB30009FF20 = {
 			isa = PBXGroup;
 			children = (
 				F4BA3DDC24C54AB30009FF20 /* Strangers */,
+				F45DFD5924F7612B003304CB /* StrangersTests */,
 				F4BA3DDB24C54AB30009FF20 /* Products */,
 				F18D2950BEC58673BD9DF545 /* Pods */,
 				C6D5004128E201F6118201DA /* Frameworks */,
@@ -115,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				F4BA3DDA24C54AB30009FF20 /* Strangers.app */,
+				F45DFD5824F7612B003304CB /* StrangersTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -301,6 +333,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		F45DFD5724F7612B003304CB /* StrangersTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F45DFD6124F7612B003304CB /* Build configuration list for PBXNativeTarget "StrangersTests" */;
+			buildPhases = (
+				F45DFD5424F7612B003304CB /* Sources */,
+				F45DFD5524F7612B003304CB /* Frameworks */,
+				F45DFD5624F7612B003304CB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F45DFD5E24F7612B003304CB /* PBXTargetDependency */,
+			);
+			name = StrangersTests;
+			productName = StrangersTests;
+			productReference = F45DFD5824F7612B003304CB /* StrangersTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		F4BA3DD924C54AB30009FF20 /* Strangers */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F4BA3DEE24C54AB90009FF20 /* Build configuration list for PBXNativeTarget "Strangers" */;
@@ -330,6 +380,10 @@
 				LastUpgradeCheck = 1160;
 				ORGANIZATIONNAME = Robihamanto;
 				TargetAttributes = {
+					F45DFD5724F7612B003304CB = {
+						CreatedOnToolsVersion = 11.6;
+						TestTargetID = F4BA3DD924C54AB30009FF20;
+					};
 					F4BA3DD924C54AB30009FF20 = {
 						CreatedOnToolsVersion = 11.6;
 					};
@@ -349,11 +403,19 @@
 			projectRoot = "";
 			targets = (
 				F4BA3DD924C54AB30009FF20 /* Strangers */,
+				F45DFD5724F7612B003304CB /* StrangersTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		F45DFD5624F7612B003304CB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F4BA3DD824C54AB30009FF20 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -410,6 +472,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		F45DFD5424F7612B003304CB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F45DFD6324F76180003304CB /* UserTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F4BA3DD624C54AB30009FF20 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -442,6 +512,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		F45DFD5E24F7612B003304CB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F4BA3DD924C54AB30009FF20 /* Strangers */;
+			targetProxy = F45DFD5D24F7612B003304CB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		F4BA3DE324C54AB30009FF20 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -462,6 +540,46 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		F45DFD5F24F7612B003304CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = N9U3ASR94C;
+				INFOPLIST_FILE = StrangersTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = id.robihamanto.StrangersTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Strangers.app/Strangers";
+			};
+			name = Debug;
+		};
+		F45DFD6024F7612B003304CB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = N9U3ASR94C;
+				INFOPLIST_FILE = StrangersTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = id.robihamanto.StrangersTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Strangers.app/Strangers";
+			};
+			name = Release;
+		};
 		F4BA3DEC24C54AB90009FF20 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -617,6 +735,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		F45DFD6124F7612B003304CB /* Build configuration list for PBXNativeTarget "StrangersTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F45DFD5F24F7612B003304CB /* Debug */,
+				F45DFD6024F7612B003304CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		F4BA3DD524C54AB30009FF20 /* Build configuration list for PBXProject "Strangers" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
