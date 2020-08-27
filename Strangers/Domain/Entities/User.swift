@@ -13,12 +13,19 @@ struct User: Codable {
     var name: String?
     var avatar: String?
     var isAdmin: Bool?
+    var bio: String?
+    var login: String?
+    var location: String?
+    var url: String?
     
     public enum CodingKeys: String, CodingKey {
         case id = "id"
-        case name = "login"
+        case name = "name"
         case avatar = "avatar_url"
         case isAdmin = "site_admin"
+        case login = "login"
+        case location = "location"
+        case url = "url"
     }
     
 }
