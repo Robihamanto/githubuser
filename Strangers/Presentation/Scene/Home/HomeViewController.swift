@@ -62,11 +62,8 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         
         let row = indexPath.row
         let maxRow = users.count - 5
-        
-        print("Row: \(row) maxRow: \(maxRow)")
-        
+
         if row == maxRow {
-            print("Row: \(row) maxRow: \(maxRow)")
             viewModel
                 .input
                 .loadMore
