@@ -10,5 +10,7 @@ target 'Strangers' do
   # Networking
   pod 'Moya', '~> 14.0'
   pod 'Kingfisher', '~> 5.0'
+  pod 'RxSwift', '~> 5'
+  pod 'RxCocoa', '~> 5'
 
 end

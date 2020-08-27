@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		893540913BF2535F7F573100 /* Pods_Strangers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34C9E1B29EC6201487D39906 /* Pods_Strangers.framework */; };
+		F4AC61B824F369F800D82D81 /* UserDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AC61B724F369F800D82D81 /* UserDetailsViewModel.swift */; };
+		F4AC61BA24F36C3800D82D81 /* FetchUserUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AC61B924F36C3800D82D81 /* FetchUserUseCase.swift */; };
 		F4BA3DDE24C54AB30009FF20 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BA3DDD24C54AB30009FF20 /* AppDelegate.swift */; };
 		F4BA3DE024C54AB30009FF20 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BA3DDF24C54AB30009FF20 /* SceneDelegate.swift */; };
 		F4BA3DE224C54AB30009FF20 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BA3DE124C54AB30009FF20 /* ViewController.swift */; };
@@ -39,6 +41,8 @@
 		34C9E1B29EC6201487D39906 /* Pods_Strangers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Strangers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A4CC7FECD2930294F1603C8 /* Pods-Strangers.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Strangers.debug.xcconfig"; path = "Target Support Files/Pods-Strangers/Pods-Strangers.debug.xcconfig"; sourceTree = "<group>"; };
 		84887A1CEFAEE24B7A5F809B /* Pods-Strangers.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Strangers.release.xcconfig"; path = "Target Support Files/Pods-Strangers/Pods-Strangers.release.xcconfig"; sourceTree = "<group>"; };
+		F4AC61B724F369F800D82D81 /* UserDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsViewModel.swift; sourceTree = "<group>"; };
+		F4AC61B924F36C3800D82D81 /* FetchUserUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchUserUseCase.swift; sourceTree = "<group>"; };
 		F4BA3DDA24C54AB30009FF20 /* Strangers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Strangers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4BA3DDD24C54AB30009FF20 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4BA3DDF24C54AB30009FF20 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -171,6 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				F4C758AA24EA620700CEEA00 /* UserDetailsViewController.swift */,
+				F4AC61B724F369F800D82D81 /* UserDetailsViewModel.swift */,
 			);
 			path = "User Details";
 			sourceTree = "<group>";
@@ -222,6 +227,7 @@
 			isa = PBXGroup;
 			children = (
 				F4C758BE24EAA7A600CEEA00 /* FetchUsersUseCase.swift */,
+				F4AC61B924F36C3800D82D81 /* FetchUserUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -415,7 +421,9 @@
 				F4C758BC24EAA74B00CEEA00 /* Cancellable.swift in Sources */,
 				F4C758B424EA862000CEEA00 /* SettingViewController.swift in Sources */,
 				F4C758A824EA487200CEEA00 /* MainCoordinator.swift in Sources */,
+				F4AC61BA24F36C3800D82D81 /* FetchUserUseCase.swift in Sources */,
 				F4C758CC24EBA66900CEEA00 /* UserRepositoryType.swift in Sources */,
+				F4AC61B824F369F800D82D81 /* UserDetailsViewModel.swift in Sources */,
 				F4BA3DE224C54AB30009FF20 /* ViewController.swift in Sources */,
 				F4C758CE24EBA67A00CEEA00 /* UserRepository.swift in Sources */,
 				F4C758AF24EA7BDB00CEEA00 /* UserCoordinator.swift in Sources */,
