@@ -154,21 +154,20 @@
                                                     <constraint firstAttribute="width" constant="35" id="cEg-4y-v2P"/>
                                                 </constraints>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="https://abc.github.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mgP-RP-rDj">
-                                                <rect key="frame" x="51" y="22.5" width="174" height="20.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YjN-ZU-SgH">
+                                                <rect key="frame" x="51" y="17.5" width="291" height="30"/>
+                                                <state key="normal" title="Button"/>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
-                                            <constraint firstItem="mgP-RP-rDj" firstAttribute="leading" secondItem="6B0-FC-Kcv" secondAttribute="trailing" constant="8" id="5tE-6L-VnL"/>
                                             <constraint firstAttribute="height" constant="65" id="9nI-FL-PjP"/>
-                                            <constraint firstItem="mgP-RP-rDj" firstAttribute="centerY" secondItem="6B0-FC-Kcv" secondAttribute="centerY" id="ARB-lv-ToH"/>
+                                            <constraint firstAttribute="trailing" secondItem="YjN-ZU-SgH" secondAttribute="trailing" constant="8" id="ELG-U4-oIu"/>
                                             <constraint firstItem="6B0-FC-Kcv" firstAttribute="width" secondItem="6B0-FC-Kcv" secondAttribute="height" multiplier="1:1" id="Rs0-88-1Sg"/>
                                             <constraint firstItem="6B0-FC-Kcv" firstAttribute="leading" secondItem="SXg-Qk-lql" secondAttribute="leading" constant="8" id="cbi-7f-vaY"/>
+                                            <constraint firstItem="YjN-ZU-SgH" firstAttribute="centerY" secondItem="SXg-Qk-lql" secondAttribute="centerY" id="ghq-fu-wwA"/>
                                             <constraint firstItem="6B0-FC-Kcv" firstAttribute="centerY" secondItem="SXg-Qk-lql" secondAttribute="centerY" id="hnl-Mk-zhK"/>
+                                            <constraint firstItem="YjN-ZU-SgH" firstAttribute="leading" secondItem="6B0-FC-Kcv" secondAttribute="trailing" constant="8" id="nVY-ds-1HB"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -211,7 +210,7 @@
                         <outlet property="bioLabel" destination="hhx-Iz-BgK" id="WnI-CF-NMg"/>
                         <outlet property="isLoadingActivityIndicatior" destination="xvx-Pq-oeF" id="V5e-nP-IZF"/>
                         <outlet property="isStaff" destination="vUf-Z0-xlj" id="dJd-rd-HrS"/>
-                        <outlet property="linkLabel" destination="mgP-RP-rDj" id="oKe-hS-1XP"/>
+                        <outlet property="linkLabelButton" destination="YjN-ZU-SgH" id="WM0-kw-6eL"/>
                         <outlet property="locationLabel" destination="ohZ-mU-Wm1" id="wH8-TO-nAn"/>
                         <outlet property="nameLabel" destination="wQV-49-E8m" id="4kd-PU-LCb"/>
                         <outlet property="userPhotoImageView" destination="ifl-p1-drl" id="tIu-qD-qOf"/>
