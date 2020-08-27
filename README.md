@@ -14,9 +14,9 @@ Strangers ( Github API)
 
 ``` bash
 git clone https://github.com/robihamanto/githubuser.git
-cd Papr
+cd Strangers
 pod install
-open Papr.xcworkspace # or xed .
+open Strangers.xcworkspace # or xed .
 
 - Run (⌘ + R) or
 - Test (⌘ + U)
