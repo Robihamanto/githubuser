@@ -28,7 +28,7 @@ Fetching users on github, and display the user details
 
 ## 🎉 How am I building this?
 1. Using [`RxSwift`](https://github.com/ReactiveX/RxSwift) 🔥
-2. `MVVM` + `Coordinator`
+2. `MVVM` + `Coordinator` + `Pagination`
 3. Using `Codable`, [`Moya`](https://github.com/Moya/Moya), [`Kingfisher`](https://github.com/onevcat/Kingfisher).
 4. Exploring [Github](https://github.com) and its [API](https://developer.github.com/v3/)
 5. Fun thing!
