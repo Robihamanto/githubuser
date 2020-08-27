@@ -17,6 +17,7 @@ struct User: Codable {
     var login: String?
     var location: String?
     var url: String?
+    var blog: String?
     
     public enum CodingKeys: String, CodingKey {
         case id = "id"
@@ -26,6 +27,7 @@ struct User: Codable {
         case login = "login"
         case location = "location"
         case url = "url"
+        case blog = "blog"
     }
     
 }
