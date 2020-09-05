@@ -24,7 +24,6 @@ struct User: Codable {
     var starredURL: String?
     var organizationsURL: String?
     var reposURL: String?
-    
     var eventsURL: String?
     var blog: String?
     
@@ -43,6 +42,7 @@ struct User: Codable {
         case starredURL = "starred_url"
         case organizationsURL = "organizations_url"
         case reposURL = "repos_url"
+        case eventsURL = "events_url"
         case blog = "blog"
     }
     

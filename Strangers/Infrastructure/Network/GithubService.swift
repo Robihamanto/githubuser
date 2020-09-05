@@ -11,6 +11,7 @@ import Moya
 protocol GithubServiceType {
     func fetchUsers(page:Int, pageLimit: Int, completion: @escaping (Result<[User], Error>) -> Void)
     func fetchUser(userID: Int, completion: @escaping (Result<User, Error>) -> Void)
+    func fetchProfile(completion: @escaping (Result<User, Error>) -> Void)
 }
 
 class GithubService: GithubServiceType {
@@ -35,6 +36,22 @@ class GithubService: GithubServiceType {
     
     func fetchUser(userID: Int, completion: @escaping (Result<User, Error>) -> Void) {
         provider.request(.fetchUser(id: userID)) { result in
+            switch result {
+            case .success(let response):
+                do {
+                    let response = try JSONDecoder().decode(User.self, from: response.data)
+                    completion(.success(response))
+                } catch (let error) {
+                    completion(.failure(error))
+                }
+            case .failure(let error):
+                completion(.failure(error))
+            }
+        }
+    }
+    
+    func fetchProfile(completion: @escaping (Result<User, Error>) -> Void) {
+        provider.request(.fetchProfile) { result in
             switch result {
             case .success(let response):
                 do {

@@ -11,6 +11,7 @@ import Moya
 enum Github {
     case fetchUsers(page: Int, pageLimit: Int)
     case fetchUser(id: Int)
+    case fetchProfile
 }
 
 extension Github: TargetType {
@@ -23,18 +24,18 @@ extension Github: TargetType {
     
     var path: String {
         switch self {
-            case .fetchUsers:
-                return "/users"
-            case .fetchUser(let id):
-                return "/user/\(id)"
+        case .fetchUsers:
+            return "/users"
+        case .fetchUser(let id):
+            return "/user/\(id)"
+        case .fetchProfile:
+            return "/user"
         }
     }
     
     var method: Moya.Method {
         switch self {
-            case .fetchUsers:
-            return .get
-            case .fetchUser(_):
+        case .fetchUsers, .fetchUser, .fetchProfile:
             return .get
         }
     }
@@ -52,14 +53,14 @@ extension Github: TargetType {
 
             return .requestParameters(parameters: params, encoding: URLEncoding())
             
-        case .fetchUser:
+        case .fetchUser, .fetchProfile:
             return .requestPlain
         }
     }
     
     var headers: [String : String]? {
         switch self {
-        case .fetchUsers, .fetchUser:
+        case .fetchUsers, .fetchUser, .fetchProfile:
             let token = "2c3448408fced55050d749406f9c43679fa49c26"
             return ["Authorization": "Bearer \(token)"]
         }

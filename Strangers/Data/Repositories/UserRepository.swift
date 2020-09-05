@@ -41,4 +41,16 @@ extension UserRepository: UserRepositoryType {
         }
     }
     
+    func fetchProfile(completion: @escaping (Result<User, Error>) -> Void) {
+        let service = GithubService()
+        service.fetchProfile { result in
+            switch result {
+            case .success(let user):
+                completion(.success(user))
+            case .failure(let error):
+                completion(.failure(error))
+            }
+        }
+    }
+    
 }

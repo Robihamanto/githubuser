@@ -16,6 +16,8 @@
 		F4AE3A4C25034652005BCA50 /* CoordinatedNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AE3A4B25034652005BCA50 /* CoordinatedNavigationController.swift */; };
 		F4AE3A502503756F005BCA50 /* SettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AE3A4E2503756F005BCA50 /* SettingCell.swift */; };
 		F4AE3A5125037570005BCA50 /* SettingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4AE3A4F2503756F005BCA50 /* SettingCell.xib */; };
+		F4AE3A5325038737005BCA50 /* SettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AE3A5225038737005BCA50 /* SettingViewModel.swift */; };
+		F4AE3A55250387B9005BCA50 /* FetchProfileUseCaseType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AE3A54250387B9005BCA50 /* FetchProfileUseCaseType.swift */; };
 		F4BA3DDE24C54AB30009FF20 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BA3DDD24C54AB30009FF20 /* AppDelegate.swift */; };
 		F4BA3DE024C54AB30009FF20 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BA3DDF24C54AB30009FF20 /* SceneDelegate.swift */; };
 		F4BA3DE224C54AB30009FF20 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BA3DE124C54AB30009FF20 /* ViewController.swift */; };
@@ -67,6 +69,8 @@
 		F4AE3A4B25034652005BCA50 /* CoordinatedNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatedNavigationController.swift; sourceTree = "<group>"; };
 		F4AE3A4E2503756F005BCA50 /* SettingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingCell.swift; sourceTree = "<group>"; };
 		F4AE3A4F2503756F005BCA50 /* SettingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingCell.xib; sourceTree = "<group>"; };
+		F4AE3A5225038737005BCA50 /* SettingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewModel.swift; sourceTree = "<group>"; };
+		F4AE3A54250387B9005BCA50 /* FetchProfileUseCaseType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchProfileUseCaseType.swift; sourceTree = "<group>"; };
 		F4BA3DDA24C54AB30009FF20 /* Strangers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Strangers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4BA3DDD24C54AB30009FF20 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4BA3DDF24C54AB30009FF20 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -239,6 +243,7 @@
 			children = (
 				F4AE3A4D25037552005BCA50 /* Cell */,
 				F4C758B324EA862000CEEA00 /* SettingViewController.swift */,
+				F4AE3A5225038737005BCA50 /* SettingViewModel.swift */,
 			);
 			path = Setting;
 			sourceTree = "<group>";
@@ -283,6 +288,7 @@
 			children = (
 				F4C758BE24EAA7A600CEEA00 /* FetchUsersUseCase.swift */,
 				F4AC61B924F36C3800D82D81 /* FetchUserUseCase.swift */,
+				F4AE3A54250387B9005BCA50 /* FetchProfileUseCaseType.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -523,6 +529,7 @@
 				F4C758CE24EBA67A00CEEA00 /* UserRepository.swift in Sources */,
 				F4C758AF24EA7BDB00CEEA00 /* UserCoordinator.swift in Sources */,
 				F4C758A024EA470100CEEA00 /* Storyboarded.swift in Sources */,
+				F4AE3A5325038737005BCA50 /* SettingViewModel.swift in Sources */,
 				F4C758BF24EAA7A600CEEA00 /* FetchUsersUseCase.swift in Sources */,
 				F4C758C224EAA97800CEEA00 /* User.swift in Sources */,
 				F4BA3DDE24C54AB30009FF20 /* AppDelegate.swift in Sources */,
@@ -534,6 +541,7 @@
 				F4C758AB24EA620700CEEA00 /* UserDetailsViewController.swift in Sources */,
 				F4C758A624EA47BF00CEEA00 /* HomeViewController.swift in Sources */,
 				F4AE3A48250338C0005BCA50 /* MainTaBarController.swift in Sources */,
+				F4AE3A55250387B9005BCA50 /* FetchProfileUseCaseType.swift in Sources */,
 				F4AE3A502503756F005BCA50 /* SettingCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
