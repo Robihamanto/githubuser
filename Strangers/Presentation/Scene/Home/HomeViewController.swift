@@ -12,7 +12,7 @@ import RxCocoa
 
 class HomeViewController: UIViewController, Storyboarded {
     
-    weak var coordinator: MainCoordinator?
+    weak var coordinator: HomeCoordinator?
     private var viewModel: HomeViewModel!
     private var loadMore = false
     private var users = [User]()
@@ -50,8 +50,8 @@ class HomeViewController: UIViewController, Storyboarded {
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let user = users[indexPath.row]
-        coordinator?.navigateToUserDetail(to: user.id ?? 0)
+        //let user = users[indexPath.row]
+        //coordinator?.navigateToUserDetail(to: user.id ?? 0)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
