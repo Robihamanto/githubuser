@@ -12,6 +12,11 @@ import RxCocoa
 
 class SettingViewController: UIViewController, Storyboarded {
     
+    
+    @IBOutlet weak var profileImageView: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var companyLabel: UILabel!
+    @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
     weak var coordinator: SettingCoordinator?
@@ -25,12 +30,13 @@ class SettingViewController: UIViewController, Storyboarded {
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel = SettingViewModel()
-        
         setupViews()
         bindViewModel()
     }
     
-    func setupViews() {
+    private func setupViews() {
+        navigationController?.title = "Setting"
+        
         tableView.delegate = self
         tableView.dataSource = self
     }
@@ -41,7 +47,20 @@ class SettingViewController: UIViewController, Storyboarded {
         outputs.user.subscribe(onNext: {[weak self] user in
             self?.user = user
             self?.tableView.reloadData()
+            self?.updateProfile()
             }).disposed(by: disposeBag)
+    }
+    
+    private func updateProfile() {
+        nameLabel.text = self.user?.name
+        companyLabel.text = self.user?.company
+        locationLabel.text = self.user?.location
+        
+        guard let url = URL(string: user?.avatar ?? "") else { return }
+        profileImageView.kf.setImage(with: url)
+        profileImageView
+            .layer
+            .cornerRadius = profileImageView.bounds.height / 2 
     }
 
 }
@@ -80,6 +99,5 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
         
         return cell
     }
-    
     
 }

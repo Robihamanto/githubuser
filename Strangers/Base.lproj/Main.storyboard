@@ -229,89 +229,67 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L7v-2l-OKk">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="caJ-hI-i5r">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ttA-sQ-mLe">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
-                                        <subviews>
-                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="caJ-hI-i5r">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
-                                                <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <view key="tableHeaderView" contentMode="scaleToFill" id="FWZ-Qa-QFg">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="212"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle-cropped" translatesAutoresizingMaskIntoConstraints="NO" id="XLp-wp-5Jt">
-                                                            <rect key="frame" x="156.5" y="8" width="101" height="100"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="100" id="5VJ-Sa-J65"/>
-                                                                <constraint firstAttribute="width" secondItem="XLp-wp-5Jt" secondAttribute="height" constant="1" id="Bn7-jW-Moc"/>
-                                                            </constraints>
-                                                        </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Robihamanto" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PQq-XG-bvo">
-                                                            <rect key="frame" x="137" y="126" width="140" height="27.5"/>
-                                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="23"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+62 899-9668-252" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gmA-le-gik">
-                                                            <rect key="frame" x="138.5" y="153.5" width="137.5" height="18"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@robihamanto" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2tH-U5-GiH">
-                                                            <rect key="frame" x="157" y="173.5" width="100" height="18"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                            <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                    </subviews>
-                                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                                    <constraints>
-                                                        <constraint firstItem="gmA-le-gik" firstAttribute="centerX" secondItem="FWZ-Qa-QFg" secondAttribute="centerX" id="0sg-LA-aY1"/>
-                                                        <constraint firstItem="gmA-le-gik" firstAttribute="top" secondItem="PQq-XG-bvo" secondAttribute="bottom" id="5iQ-Lr-Dm6"/>
-                                                        <constraint firstItem="PQq-XG-bvo" firstAttribute="top" secondItem="XLp-wp-5Jt" secondAttribute="bottom" constant="18" id="Dm6-i9-r6i"/>
-                                                        <constraint firstItem="PQq-XG-bvo" firstAttribute="centerX" secondItem="FWZ-Qa-QFg" secondAttribute="centerX" id="Vjr-zz-9Yj"/>
-                                                        <constraint firstItem="2tH-U5-GiH" firstAttribute="top" secondItem="gmA-le-gik" secondAttribute="bottom" constant="2" id="WcW-4t-zkU"/>
-                                                        <constraint firstItem="XLp-wp-5Jt" firstAttribute="top" secondItem="FWZ-Qa-QFg" secondAttribute="top" constant="8" id="iwB-We-sJE"/>
-                                                        <constraint firstItem="2tH-U5-GiH" firstAttribute="centerX" secondItem="FWZ-Qa-QFg" secondAttribute="centerX" id="rj0-el-Bni"/>
-                                                        <constraint firstItem="XLp-wp-5Jt" firstAttribute="centerX" secondItem="FWZ-Qa-QFg" secondAttribute="centerX" id="uhD-Dm-t5p"/>
-                                                    </constraints>
-                                                </view>
-                                            </tableView>
-                                        </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                        <constraints>
-                                            <constraint firstAttribute="bottom" secondItem="caJ-hI-i5r" secondAttribute="bottom" id="26i-kI-vy6"/>
-                                            <constraint firstItem="caJ-hI-i5r" firstAttribute="leading" secondItem="ttA-sQ-mLe" secondAttribute="leading" id="7yU-xb-1Nh"/>
-                                            <constraint firstItem="caJ-hI-i5r" firstAttribute="top" secondItem="ttA-sQ-mLe" secondAttribute="top" id="FeN-sJ-Ip5"/>
-                                            <constraint firstAttribute="trailing" secondItem="caJ-hI-i5r" secondAttribute="trailing" id="gbd-tB-nTS"/>
-                                        </constraints>
-                                    </view>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <constraints>
-                                    <constraint firstItem="ttA-sQ-mLe" firstAttribute="width" secondItem="L7v-2l-OKk" secondAttribute="width" id="LJx-VC-5zr"/>
-                                    <constraint firstItem="ttA-sQ-mLe" firstAttribute="top" secondItem="L7v-2l-OKk" secondAttribute="top" id="c0R-ni-AwF"/>
-                                    <constraint firstAttribute="bottom" secondItem="ttA-sQ-mLe" secondAttribute="bottom" id="cWe-so-qsF"/>
-                                    <constraint firstAttribute="trailing" secondItem="ttA-sQ-mLe" secondAttribute="trailing" id="gUV-eh-BdC"/>
-                                    <constraint firstItem="ttA-sQ-mLe" firstAttribute="leading" secondItem="L7v-2l-OKk" secondAttribute="leading" id="hAI-Kb-eW8"/>
-                                    <constraint firstItem="ttA-sQ-mLe" firstAttribute="height" secondItem="L7v-2l-OKk" secondAttribute="height" priority="250" id="w6V-DM-btR"/>
-                                </constraints>
-                            </scrollView>
+                                <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <view key="tableHeaderView" contentMode="scaleToFill" id="FWZ-Qa-QFg">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="212"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle-cropped" translatesAutoresizingMaskIntoConstraints="NO" id="XLp-wp-5Jt">
+                                            <rect key="frame" x="156.5" y="8" width="101" height="100"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="100" id="5VJ-Sa-J65"/>
+                                                <constraint firstAttribute="width" secondItem="XLp-wp-5Jt" secondAttribute="height" constant="1" id="Bn7-jW-Moc"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Robihamanto" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PQq-XG-bvo">
+                                            <rect key="frame" x="137" y="126" width="140" height="27.5"/>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="23"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Company: N/A" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gmA-le-gik">
+                                            <rect key="frame" x="158" y="153.5" width="98.5" height="18"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location: California" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2tH-U5-GiH">
+                                            <rect key="frame" x="141.5" y="173.5" width="131.5" height="18"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    <constraints>
+                                        <constraint firstItem="gmA-le-gik" firstAttribute="centerX" secondItem="FWZ-Qa-QFg" secondAttribute="centerX" id="0sg-LA-aY1"/>
+                                        <constraint firstItem="gmA-le-gik" firstAttribute="top" secondItem="PQq-XG-bvo" secondAttribute="bottom" id="5iQ-Lr-Dm6"/>
+                                        <constraint firstItem="PQq-XG-bvo" firstAttribute="top" secondItem="XLp-wp-5Jt" secondAttribute="bottom" constant="18" id="Dm6-i9-r6i"/>
+                                        <constraint firstItem="PQq-XG-bvo" firstAttribute="centerX" secondItem="FWZ-Qa-QFg" secondAttribute="centerX" id="Vjr-zz-9Yj"/>
+                                        <constraint firstItem="2tH-U5-GiH" firstAttribute="top" secondItem="gmA-le-gik" secondAttribute="bottom" constant="2" id="WcW-4t-zkU"/>
+                                        <constraint firstItem="XLp-wp-5Jt" firstAttribute="top" secondItem="FWZ-Qa-QFg" secondAttribute="top" constant="8" id="iwB-We-sJE"/>
+                                        <constraint firstItem="2tH-U5-GiH" firstAttribute="centerX" secondItem="FWZ-Qa-QFg" secondAttribute="centerX" id="rj0-el-Bni"/>
+                                        <constraint firstItem="XLp-wp-5Jt" firstAttribute="centerX" secondItem="FWZ-Qa-QFg" secondAttribute="centerX" id="uhD-Dm-t5p"/>
+                                    </constraints>
+                                </view>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="L7v-2l-OKk" firstAttribute="top" secondItem="3EB-HH-7Uq" secondAttribute="top" id="Etj-UW-RyX"/>
-                            <constraint firstItem="L7v-2l-OKk" firstAttribute="bottom" secondItem="3EB-HH-7Uq" secondAttribute="bottom" id="eGr-xP-LZT"/>
-                            <constraint firstItem="L7v-2l-OKk" firstAttribute="trailing" secondItem="qZX-eX-7Jm" secondAttribute="trailing" id="khA-sq-bcE"/>
-                            <constraint firstItem="L7v-2l-OKk" firstAttribute="leading" secondItem="qZX-eX-7Jm" secondAttribute="leading" id="qCG-bD-uUY"/>
+                            <constraint firstItem="caJ-hI-i5r" firstAttribute="leading" secondItem="3EB-HH-7Uq" secondAttribute="leading" id="BUy-yr-Ct2"/>
+                            <constraint firstItem="3EB-HH-7Uq" firstAttribute="bottom" secondItem="caJ-hI-i5r" secondAttribute="bottom" id="Mgy-L5-FmW"/>
+                            <constraint firstItem="caJ-hI-i5r" firstAttribute="trailing" secondItem="3EB-HH-7Uq" secondAttribute="trailing" id="SOY-pM-j9m"/>
+                            <constraint firstItem="caJ-hI-i5r" firstAttribute="top" secondItem="qZX-eX-7Jm" secondAttribute="topMargin" id="f5R-ru-k2u"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="3EB-HH-7Uq"/>
                     </view>
                     <connections>
+                        <outlet property="companyLabel" destination="gmA-le-gik" id="8Uf-U3-7RM"/>
+                        <outlet property="locationLabel" destination="2tH-U5-GiH" id="sAv-zz-3GN"/>
+                        <outlet property="nameLabel" destination="PQq-XG-bvo" id="zyB-GM-NPX"/>
+                        <outlet property="profileImageView" destination="XLp-wp-5Jt" id="38S-6H-2oB"/>
                         <outlet property="tableView" destination="caJ-hI-i5r" id="Sxk-Vn-ael"/>
                     </connections>
                 </viewController>
