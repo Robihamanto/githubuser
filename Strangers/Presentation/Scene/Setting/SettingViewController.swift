@@ -20,6 +20,7 @@ class SettingViewController: UIViewController, Storyboarded {
     
     private var user: User?
     private var cellData = [["Followers", "Following"], ["Repositories", "Events"], ["Blog"]]
+    private var cellDataImageName = [["person.2", "person.2"], ["folder", "paperplane"], ["quote.bubble"]]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,36 +66,17 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = SettingCell()
-        cell.accessoryType = .disclosureIndicator
-        
-        
-        
-        
         
         let section = indexPath.section
         let row = indexPath.row
         
-        switch (section, row) {
-        case (0,0):
-            cell.imageView?.image = UIImage(systemName: "person.2")
-            cell.textLabel?.text = cellData[section][row]
-        case (0,1):
-            cell.imageView?.image = UIImage(systemName: "person.2")
-            cell.textLabel?.text = cellData[section][row]
-        case (1,0):
-            cell.imageView?.image = UIImage(systemName: "folder")
-            cell.textLabel?.text = cellData[section][row]
-        case (1,1):
-            cell.imageView?.image = UIImage(systemName: "paperplane")
-            cell.textLabel?.text = cellData[section][row]
-        case (2,0):
-            cell.imageView?.image = UIImage(systemName: "quote.bubble")
-            cell.textLabel?.text = cellData[section][row]
-        default:
-            cell.imageView?.image = UIImage(systemName: "")
-            cell.textLabel?.text = ""
-        }
+        let title = cellData[section][row]
+        let imageName = cellDataImageName[section][row]
+        
+        let cell = SettingCell()
+        cell.accessoryType = .disclosureIndicator
+        cell.imageView?.image = UIImage(systemName: imageName)
+        cell.textLabel?.text = title
         
         return cell
     }
