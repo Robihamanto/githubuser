@@ -18,7 +18,7 @@ class MainCoordinator: NSObject, Coordinator, UINavigationControllerDelegate {
     
     func start() {
         let vc = HomeViewController.instantiate()
-        vc.coordinator = self
+        // vc.coordinator = self
         navigationController.pushViewController(vc, animated: false)
     }
     
@@ -30,10 +30,10 @@ class MainCoordinator: NSObject, Coordinator, UINavigationControllerDelegate {
     }
     
     func navigateToSetting() {
-        let child = SettingCoordinator(navigationController: navigationController)
-        child.parentCoordinator = self
-        childCoordinators.append(child)
-        child.start()
+//        let child = SettingCoordinator()
+//        child.parentCoordinator = self
+//        childCoordinators.append(child)
+//        child.start()
     }
     
     func childDidFinish(_ child: Coordinator?) {
@@ -62,7 +62,7 @@ class MainCoordinator: NSObject, Coordinator, UINavigationControllerDelegate {
         
         // check back button did tap from setting
         if let userDetailCoordinator = fromViewController as? SettingViewController {
-            childDidFinish(userDetailCoordinator.coordinator)
+//            childDidFinish(userDetailCoordinator.coordinator)
             return
         }
     }
