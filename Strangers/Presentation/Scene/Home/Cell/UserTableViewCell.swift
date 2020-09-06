@@ -23,7 +23,7 @@ class UserTableViewCell: UITableViewCell {
         isStaffUIView.layer.cornerRadius = isStaffUIView.layer.bounds.height / 2
         userImageView.layer.cornerRadius = userImageView.layer.bounds.height / 2
         
-        nameLabel.text = user.login
+        nameLabel.text = user.login?.capitalized
         
         userImageView
             .kf
