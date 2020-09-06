@@ -15,6 +15,7 @@ class UserTableViewCell: UITableViewCell {
     
     @IBOutlet weak var userImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var isStaffStackView: UIStackView!
     @IBOutlet weak var isStaffUIView: UIView!
     
     
@@ -32,6 +33,7 @@ class UserTableViewCell: UITableViewCell {
     }
     
     func updateStaffLabel(isStaff: Bool) {
+        isStaffStackView.isHidden = !isStaff
         isStaffUIView.isHidden = !isStaff
     }
     
