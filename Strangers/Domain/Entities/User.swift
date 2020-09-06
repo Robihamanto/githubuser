@@ -27,6 +27,8 @@ struct User: Codable {
     var eventsURL: String?
     var blog: String?
     var company: String?
+    var followers: Int?
+    var following: Int?
     
     public enum CodingKeys: String, CodingKey {
         case id = "id"
@@ -46,6 +48,8 @@ struct User: Codable {
         case eventsURL = "events_url"
         case blog = "blog"
         case company = "company"
+        case followers = "followers"
+        case following = "following"
     }
     
 }

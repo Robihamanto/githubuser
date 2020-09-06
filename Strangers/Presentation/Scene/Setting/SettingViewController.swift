@@ -34,11 +34,20 @@ class SettingViewController: UIViewController, Storyboarded {
         bindViewModel()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        DispatchQueue.main.async { [weak self] in
+            self?.navigationController?.navigationBar.sizeToFit()
+        }
+    }
+    
     private func setupViews() {
-        navigationController?.title = "Setting"
+        title = "Setting"
+        navigationController?.navigationBar.prefersLargeTitles = true
         
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.tableFooterView = UIView()
     }
     
     private func bindViewModel() {
@@ -92,10 +101,21 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
         let title = cellData[section][row]
         let imageName = cellDataImageName[section][row]
         
-        let cell = SettingCell()
+        let cell = UITableViewCell(style: .value1, reuseIdentifier: "profileCell")
+        
         cell.accessoryType = .disclosureIndicator
         cell.imageView?.image = UIImage(systemName: imageName)
         cell.textLabel?.text = title
+        
+        if section == 0 && row == 0 {
+            let followers = self.user?.followers ?? 0
+            cell.detailTextLabel?.text = "\(followers)"
+        }
+        
+        if section == 0 && row == 1 {
+            let following = self.user?.following ?? 0
+            cell.detailTextLabel?.text = "\(following)"
+        }
         
         return cell
     }
