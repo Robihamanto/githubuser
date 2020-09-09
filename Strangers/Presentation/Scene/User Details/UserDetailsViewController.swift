@@ -22,12 +22,16 @@ class UserDetailsViewController: UIViewController, Storyboarded {
     @IBOutlet weak var isStaff: UIView!
     @IBOutlet weak var isLoadingActivityIndicatior: UIActivityIndicatorView!
     
-    weak var coordinator: UserCoordinator?
+    weak var coordinator: HomeCoordinator?
     var userID = 0
     var user: User?
     
     private var viewModel: UserDetailsViewModel!
     private let disposeBag = DisposeBag()
+    
+    deinit {
+        print("Class destroyed and memory can reallocated")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

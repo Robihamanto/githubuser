@@ -19,15 +19,15 @@ class UserCoordinator: Coordinator {
     }
     
     func start() {
-        let vc = UserDetailsViewController.instantiate()
-        vc.coordinator = self
-        self.navigationController.pushViewController(vc, animated: true)
+//        let vc = UserDetailsViewController.instantiate()
+//        vc.coordinator = self
+//        self.navigationController.pushViewController(vc, animated: true)
     }
     
     func navigate(to userID: Int) {
-        let vc = UserDetailsViewController.instantiate()
-        vc.userID = userID
-        vc.coordinator = self
-        self.navigationController.pushViewController(vc, animated: true)
+//        let vc = UserDetailsViewController.instantiate()
+//        vc.userID = userID
+//        vc.coordinator = self
+//        self.navigationController.pushViewController(vc, animated: true)
     }
 }

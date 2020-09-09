@@ -55,16 +55,16 @@ class MainCoordinator: NSObject, Coordinator, UINavigationControllerDelegate {
         }
         
         // check back button did tap from user details
-        if let userDetailCoordinator = fromViewController as? UserDetailsViewController {
-            childDidFinish(userDetailCoordinator.coordinator)
-            return
-        }
+//        if let userDetailCoordinator = fromViewController as? UserDetailsViewController {
+//            childDidFinish(userDetailCoordinator.coordinator)
+//            return
+//        }
         
         // check back button did tap from setting
-        if let userDetailCoordinator = fromViewController as? SettingViewController {
+//        if let userDetailCoordinator = fromViewController as? SettingViewController {
 //            childDidFinish(userDetailCoordinator.coordinator)
-            return
-        }
+//            return
+//        }
     }
 
 }

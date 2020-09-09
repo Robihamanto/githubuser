@@ -23,4 +23,13 @@ class HomeCoordinator {
         navigationController.viewControllers = [viewController]
     }
     
+    
+    func navigateToUserDetail(withID userID: Int) {
+        let viewController = UserDetailsViewController.instantiate()
+        viewController.coordinator = self
+        viewController.userID = userID
+        
+        navigationController.pushViewController(viewController, animated: true)
+    }
+    
 }

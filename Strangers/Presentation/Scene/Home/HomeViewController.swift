@@ -45,22 +45,7 @@ class HomeViewController: UIViewController, Storyboarded {
         
     }
     
-}
-
-extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //let user = users[indexPath.row]
-        //coordinator?.navigateToUserDetail(to: user.id ?? 0)
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return users.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let row = indexPath.row
+    private func requestNext(row: Int) {
         let maxRow = users.count - 5
         
         if row == maxRow {
@@ -69,6 +54,24 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
                 .loadMore
                 .accept(true)
         }
+    }
+    
+}
+
+extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let user = users[indexPath.row]
+        coordinator?.navigateToUserDetail(withID: user.id ?? 0)
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return users.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        requestNext(row: indexPath.row)
         
         guard let cell = tableView.dequeueReusableCell(
             withIdentifier: UserTableViewCell.reusableIdentifier,

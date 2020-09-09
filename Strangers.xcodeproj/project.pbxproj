@@ -183,14 +183,12 @@
 				F4C758B624EAA30F00CEEA00 /* Domain */,
 				F4C758CF24EBC3BE00CEEA00 /* Infrastructure */,
 				F4C758B524EA963700CEEA00 /* Presentation */,
-				F4BA3DDD24C54AB30009FF20 /* AppDelegate.swift */,
 				F4BA3DDF24C54AB30009FF20 /* SceneDelegate.swift */,
 				F4BA3DE124C54AB30009FF20 /* ViewController.swift */,
 				F4BA3DE324C54AB30009FF20 /* Main.storyboard */,
 				F4BA3DE624C54AB90009FF20 /* Assets.xcassets */,
 				F4BA3DE824C54AB90009FF20 /* LaunchScreen.storyboard */,
 				F4BA3DEB24C54AB90009FF20 /* Info.plist */,
-				F4AE3A47250338C0005BCA50 /* MainTaBarController.swift */,
 			);
 			path = Strangers;
 			sourceTree = "<group>";
@@ -200,10 +198,12 @@
 			children = (
 				F4C7589C24EA465E00CEEA00 /* Coordinator.swift */,
 				F4C7589F24EA470100CEEA00 /* Storyboarded.swift */,
+				F4BA3DDD24C54AB30009FF20 /* AppDelegate.swift */,
 				F4C758A724EA487200CEEA00 /* MainCoordinator.swift */,
 				F4C758AE24EA7BDB00CEEA00 /* UserCoordinator.swift */,
 				F4C758B024EA85C100CEEA00 /* SettingCoordinator.swift */,
 				F4AE3A4B25034652005BCA50 /* CoordinatedNavigationController.swift */,
+				F4AE3A47250338C0005BCA50 /* MainTaBarController.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
